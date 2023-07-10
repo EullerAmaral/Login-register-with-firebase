@@ -21,6 +21,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         homeScreen?.delegate(delegate: self)
         viewModel.delegate(delegate: self)
+        self.dismissKeyboard()
     }
     
 }
@@ -53,6 +54,16 @@ extension HomeVC: HomeScreenProtocol {
 
         viewModel.registerUser(email: homeScreen?.userTextField.text ?? "", password: homeScreen?.passwordTextField.text ?? "")
     }
-    
 }
 
+extension HomeVC {
+    func dismissKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(HomeVC.dismissKeyboardTouchOutside))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissKeyboardTouchOutside() {
+        view.endEditing(true)
+    }
+}
