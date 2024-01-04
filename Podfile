@@ -9,5 +9,5 @@ target 'LoginRegisterWithFirebase' do
 
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
-
+ 
 end

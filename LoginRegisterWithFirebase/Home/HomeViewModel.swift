@@ -1,10 +1,3 @@
-//
-//  LoginViewModel.swift
-//  LoginRegisterWithFirebase
-//
-//  Created by Iphone on 09/07/23.
-//
-
 import UIKit
 import Firebase
 
