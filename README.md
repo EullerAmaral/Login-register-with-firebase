@@ -1,2 +1,2 @@
-### Login with Firebase
+## Login with Firebase
 - ViewCode
